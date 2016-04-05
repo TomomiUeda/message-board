@@ -13,7 +13,7 @@
 </div>
 
 <div class="form-horizontal" role="form">
-  <%= form_for(@message) do |f| %>
+  <%= form_for(@message,  html: {class: 'form-horizontal'}) do |f| %>
   
 　　<div class="form-group">  
 　　  <label class="col-sm-1 control-label">名前:</label>
@@ -22,11 +22,11 @@
     　</div>
 
 　   <label class="col-sm-1 control-label">内容:</label>
-　   <div class="col-sm-5">
-      <%= f.text_area :body, :size => "70x3" %>
+　   <div class="col-sm-7">
+      <%= f.text_area :body, :row => "10" %>
 　   </div>
       
-　　 <div class="col-sm-2">       
+　　 <div class="col-sm-1">       
        <%= f.submit class: "btn btn-sm btn-primary" %>
      </div>
       

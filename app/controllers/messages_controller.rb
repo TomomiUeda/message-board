@@ -3,9 +3,11 @@ class MessagesController < ApplicationController
     @message = Message.new
     # Messageを全て取得する。
     @messages = Message.all
+    #テンプレート(view)をレンダリング（描画）
+    render 'index'
   end
   
- def create
+  def create
     @message = Message.new(message_params)
     @message.save
     redirect_to root_path , notice: 'メッセージを保存しました'
