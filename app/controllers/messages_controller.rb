@@ -5,6 +5,8 @@ class MessagesController < ApplicationController
     @message = Message.new
     # Messageを全て取得する。
     @messages = Message.all
+    #テンプレート(view)をレンダリング（描画）
+    render 'index'
   end
   
   def edit
