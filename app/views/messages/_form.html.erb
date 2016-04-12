@@ -14,19 +14,18 @@
   <% end %>
 
   <div class="form-group">  
-　　<label class="col-sm-1 control-label">名前:</label>
+　　<label for="message_name" class="col-sm-1 control-label">名前:</label>
 　　<div class="col-sm-1">
-      <%= f.text_field :name %>
+      <%= f.text_field :name, class: "form-control" %>
     </div>
 
-　  <label class="col-sm-1 control-label">内容:</label>
+　　<label for="message_body" class="col-sm-1 control-label">内容：</label>
 　  <div class="col-sm-6">
-      <%= f.text_area :body, :row => "100" %>
+      <%= f.text_area :body, class: "form-control", :low => "10" %>
 　  </div>
-　  
-　  <label class="col-sm-1 control-label">年齢:</label>
+　　<label for="message_age" class="col-sm-1 control-label">年齢：</label>
 　  <div class="col-sm-1">
-      <%= f.text_field :age %>
+      <%= f.text_field :age, class: "form-control"%>
 　  </div>
 
     <div class="col-sm-1">       
